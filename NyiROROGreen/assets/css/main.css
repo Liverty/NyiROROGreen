@@ -959,83 +959,108 @@ section,
 /*--------------------------------------------------------------
 # Featured Services Section
 --------------------------------------------------------------*/
-.featured-services .service-item {
+/* Style awal untuk .services .service-item */
+.services .service-item {
   background-color: var(--surface-color);
-  box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
-  padding: 50px 30px;
+  text-align: center;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  padding: 80px 20px;
   transition: all 0.3s ease-in-out;
-  position: relative;
+  height: 100%;
+  position: relative; /* Dibutuhkan agar pseudo-element dapat diposisikan */
   z-index: 1;
-  /* height: 100%;  <- Boleh ditambahkan jika diperlukan. */
 }
 
-.featured-services .service-item::before {
+/* Pseudo-element untuk efek background slide */
+.services .service-item::before {
   content: "";
   position: absolute;
-  background: var(--accent-color); /* Warna awal sebelum hover */
-  inset: 100% 0 0 0;              /* Efek slide dari bawah */
-  transition: all 0.3s;
+  background: var(--accent-color); /* Warna default sebelum hover */
+  inset: 100% 0 0 0;             /* Tersembunyi di bawah */
+  transition: all 0.3s ease-in-out;
   z-index: -1;
 }
 
-/* Ikon dan teks */
-.featured-services .service-item .icon {
-  margin-bottom: 10px;
+/* Style untuk icon */
+.services .service-item .icon {
+  margin: 0 auto;
+  width: 64px;
+  height: 64px;
+  background: var(--accent-color);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: 0.3s;
 }
 
-.featured-services .service-item .icon i {
-  color: var(--accent-color);
-  font-size: 36px;
+.services .service-item .icon i {
+  color: var(--contrast-color);
+  font-size: 28px;
   transition: ease-in-out 0.3s;
 }
 
-.featured-services .service-item h4 {
+/* Style untuk judul (menggunakan h3 sesuai CSS awal) */
+.services .service-item h3 {
   font-weight: 700;
-  margin-bottom: 15px;
-  font-size: 20px;
+  margin: 10px 0 15px 0;
+  font-size: 22px;
+  transition: 0.3s;
 }
 
-.featured-services .service-item h4 a {
-  color: var(--heading-color);
-  transition: ease-in-out 0.3s;
-}
-
-.featured-services .service-item p {
+/* Style untuk paragraf */
+.services .service-item p {
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
-  transition: ease-in-out 0.3s;
 }
 
-/* Perubahan warna teks saat hover */
-.featured-services .service-item:hover h4 a,
-.featured-services .service-item:hover .icon i,
-.featured-services .service-item:hover p {
-  color: var(--contrast-color);
+/* Efek hover pada .service-item */
+.services .service-item:hover {
+  border-color: var(--accent-color);
 }
 
-/* Efek umum saat hover: pseudo-element melebar menutupi box */
-.featured-services .service-item:hover::before {
+/* Efek hover pada judul */
+.services .service-item:hover h3,
+.services .service-item:hover p {
+  color: #fff !important;
+}
+
+/* Saat hover, pseudo-element melebar menutupi seluruh box */
+.services .service-item:hover::before {
   inset: 0;
-  border-radius: 0;
+  border-radius: 0; /* Jika ingin tanpa border radius saat hover */
 }
 
-/* Ganti gambar tiap box (override background) */
-.featured-services .service-item.box1:hover::before {
-  background: url("images/serpis1.png") no-repeat center center / cover;
+/* Atur background image spesifik untuk tiap item dengan tambahan class misal .box1, .box2, dll.
+   Ganti URL gambar sesuai kebutuhan */
+.services .service-item.box1:hover::before {
+  background: url("images/gambar1.jpg") no-repeat center center / cover;
 }
 
-.featured-services .service-item.box2:hover::before {
-  background: url("images/serpis2.png") no-repeat center center / cover;
+.services .service-item.box2:hover::before {
+  background: url("images/gambar2.jpg") no-repeat center center / cover;
 }
 
-.featured-services .service-item.box3:hover::before {
-  background: url("images/serpis3.png") no-repeat center center / cover;
+.services .service-item.box3:hover::before {
+  background: url("images/gambar3.jpg") no-repeat center center / cover;
 }
 
-.featured-services .service-item.box4:hover::before {
-  background: url("images/serpis4.png") no-repeat center center / cover;
+.services .service-item.box4:hover::before {
+  background: url("images/gambar4.jpg") no-repeat center center / cover;
 }
+
+.services .service-item.box5:hover::before {
+  background: url("images/gambar5.jpg") no-repeat center center / cover;
+}
+
+.services .service-item.box6:hover::before {
+  background: url("images/gambar6.jpg") no-repeat center center / cover;
+}
+
+/* Tambahkan selector lain jika ada lebih dari 4 item */
+
 
 /*--------------------------------------------------------------
 # About Section
