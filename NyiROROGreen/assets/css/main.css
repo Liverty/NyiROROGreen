@@ -149,6 +149,14 @@ h6 {
   background-color: var(--background-color);
 }
 
+.topbar .social-links .logo-link img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain; /* Agar rasio logo terjaga */
+  transition: 0.3s;
+}
+
+
 .header .topbar {
   background-color: var(--accent-color);
   height: 40px;
@@ -2038,6 +2046,31 @@ section,
 .portfolio-details .portfolio-description p {
   padding: 0;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
+
+.footer-logos img {
+  /* Pilih salah satu pendekatan: 
+     A. Tetapkan lebar, tinggi auto
+     B. Tetapkan tinggi, lebar auto 
+     Agar proporsi logo tidak rusak */
+
+  /* A. Tetapkan lebar 30px, tinggi otomatis */
+  width: 30px;
+  height: auto;
+
+  /* atau 
+  B. Tetapkan tinggi 30px, lebar otomatis 
+  height: 30px;
+  width: auto;
+  */
+
+  object-fit: contain; /* Pastikan logo tidak terdistorsi */
+  margin: 0 10px;      /* Spasi horizontal antar logo */
+  transition: 0.3s;
+}
+
+.footer-logos img:hover {
+  transform: scale(1.1); /* Efek zoom saat hover */
 }
 
 /*--------------------------------------------------------------
