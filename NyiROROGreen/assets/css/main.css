@@ -2055,7 +2055,7 @@ section,
      Agar proporsi logo tidak rusak */
 
   /* A. Tetapkan lebar 30px, tinggi otomatis */
-  width: 30px;
+  width: 45px;
   height: auto;
 
   /* atau 
@@ -2065,7 +2065,7 @@ section,
   */
 
   object-fit: contain; /* Pastikan logo tidak terdistorsi */
-  margin: 0 10px;      /* Spasi horizontal antar logo */
+  margin: 0 15px;      /* Spasi horizontal antar logo */
   transition: 0.3s;
 }
 
