@@ -2073,6 +2073,22 @@ section,
   transform: scale(1.1); /* Efek zoom saat hover */
 }
 
+.footer-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+.footer-logo-link img {
+  width: 60px; /* Sesuaikan ukuran sesuai kebutuhan */
+  filter: grayscale(100%);
+  transition: filter 0.3s ease-in-out;
+}
+.footer-logo-link img:hover {
+  filter: grayscale(0%);
+}
+
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
